@@ -3,8 +3,14 @@ from django.contrib import admin
 from .models import Category,Product
 from .forms import ProductAdminForm
 # Register your models here.
-
-
+import sys
+reload(sys)
+sys.setdefaultencoding( "utf-8" )
+'''
+加这段代码的原因是防止出现这样的错误
+'ascii' codec can't encode characters in position 0-1:
+    ordinal not in range(128)
+'''
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     form = ProductAdminForm
