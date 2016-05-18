@@ -69,5 +69,5 @@ class Product(models.Model):
         if self.old_price > self.price:
             return self.price
         else:
-            return None
+            return None#提交
 
