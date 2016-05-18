@@ -5,7 +5,7 @@ from django.db import models
 
 # Create your models here.
 class Category(models.Model):
-    name = models.CharField("",max_length=50)
+    name = models.CharField("名称",max_length=50)
     slug = models.SlugField(
         "Slug",
         max_length=50,unique=True,
@@ -16,6 +16,10 @@ class Category(models.Model):
     meta_keywords = models.CharField(
         "Meta 关键词",max_length=255,
         help_text='meta关键词,有利于SEO，用逗号分隔',
+    )
+    meta_description = models.CharField(
+        "Meta 描述",max_length=255,
+        help_text='meta描述',
     )
     created_at = models.DateTimeField("创建时间",auto_now_add=True)
     updated_at = models.DateTimeField("更新时间",auto_now=True)
