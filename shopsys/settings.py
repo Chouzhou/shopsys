@@ -129,7 +129,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 # 在给定的路径中寻找静态资源
 STATICFILES_DIRS = (
-    os.path.join(SETTING_DIR, 'static')
+    os.path.join(SETTINGS_DIR, 'static'),
 )
 STATIC_URL = '/static/'
 

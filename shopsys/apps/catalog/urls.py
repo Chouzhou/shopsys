@@ -7,7 +7,7 @@ from . import views
 
 
 urlpatterns = [
-    url(rls', views.index, {'template_name': 'catalog/index.html'},
+    url(r'^s', views.index, {'template_name': 'catalog/index.html'},
         'catalog_home'),
     url(r'category/(?P<category_slug>[-\w]+/$)', views.show_category,
         {'template_name': 'catalog/category.html'}, 'catalog_category'),
